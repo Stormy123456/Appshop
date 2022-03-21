@@ -1,0 +1,22 @@
+{% extends 'app_general/components/base.html' %}
+
+{% block site_title %}เมนูอาหาร{% endblock %}
+
+{% block content %}
+<div>
+    <p>เมนูอาหาร</p>
+    {% for food in foods %}
+        <div style="background-color: bisque;">
+            <h3><a href="{% url 'food' food.id %}">{{ food.title }}<a></h3>
+            <p>{{ food.price }}</p>
+            {% if food.is_premium %}
+                <p>*** รายการพิเศษ ***</p>
+            {% endif %}
+        </div>
+    {% empty %}
+        <p>ไม่มีข้อมูล</p>
+    {% endfor %}
+    
+</div>
+{% endblock %}
+

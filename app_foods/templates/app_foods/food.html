@@ -1,0 +1,19 @@
+{% extends 'app_general/components/base.html' %}
+
+{% block site_title %}{{ food.title }}{% endblock %}
+
+{% block content %}
+{% if food is not None %}
+<div style="background-color: bisque;">
+    <h3>{{ food.title }}</h3>
+    <p>{{ food.price }}</p>
+    {% if food.is_premium %}
+        <p>*** รายการพิเศษ ***</p>
+    {% endif %}
+    <p>แสดงข้อมูลเกี่ยวกับอาหาร</p>
+</div>
+
+{% else %}
+    <p>ไม่มีข้อมูล</p>
+{% endif %}
+{% endblock %}
