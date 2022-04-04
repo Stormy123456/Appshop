@@ -10,6 +10,7 @@
     {% if food.is_premium %}
         <p>*** รายการพิเศษ ***</p>
     {% endif %}
+    <p>โปรโมชั่นถึงวันที่ {{ food.promotion_end_at|date:'j N Y' }}</p>
     <p>แสดงข้อมูลเกี่ยวกับอาหาร</p>
 </div>
 
