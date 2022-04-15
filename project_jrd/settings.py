@@ -77,7 +77,8 @@ WSGI_APPLICATION = 'project_jrd.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'mysql.connector.django',
+        # 'ENGINE': 'mysql.connector.django',mysql
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'django_junraider_x',
         'USER':'root',
         'PASSWORD':'1234',
